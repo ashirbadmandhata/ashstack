@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { AuthProvider } from "@/contexts/auth-context"
 import { Toaster } from "@/components/toaster"
 import { SplashScreen } from "@/components/splash-screen" // ✅ Added
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -48,6 +49,7 @@ export default function RootLayout({
           <SplashScreen /> {/* ✅ Now active */}
           <Navigation />
           <main className="min-h-[calc(100vh-8rem)]">{children}</main>
+          <SpeedInsights />
           <Footer />
           <Toaster />
         </AuthProvider>
